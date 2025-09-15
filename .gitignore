@@ -2,7 +2,7 @@
 # Env vars
 .env
 .next
-node_modules
+
 
 
 # Logs
