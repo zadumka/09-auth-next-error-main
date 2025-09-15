@@ -13,17 +13,3 @@ const initialDraft: CreateNoteParams = {
   content: "",
   tag: "Todo",
 };
-
-export const useNoteStore = create<NoteStore>()(
-  persist(
-    (set) => ({
-      draft: initialDraft,
-      setDraft: (draft) => set({ draft }),
-      clearDraft: () => set({ draft: initialDraft }),
-    }),
-    {
-      name: "note-draft",
-      partialize: (state) => ({ draft: state.draft }),
-    }
-  )
-);
